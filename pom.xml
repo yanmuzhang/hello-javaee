@@ -9,6 +9,10 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>nio</module>
+        <module>dubbo-demo</module>
+        <module>dubbo-spring-demo</module>
+        <module>dubbo-springboot-demo</module>
+        <module>singleton</module>
     </modules>
     <packaging>pom</packaging>
 
