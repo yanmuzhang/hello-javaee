@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.sufeng.control.MainController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.sufeng.control.MainController">
 
    <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
      <tabs>
        <Tab text="Http">
          <content>
              <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="374.0" prefWidth="600.0">
-                 <Button layoutX="532.0" layoutY="14.0" onAction="#handlerBtnClick" prefHeight="23.0" prefWidth="56.0" text="执行" />
-                  <MenuButton fx:id="ui_http_method" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onHttpMehodSelected">
+                 <Button layoutX="532.0" layoutY="14.0" onAction="#handlerBtnClick" onMouseClicked="#onExecCliced" prefHeight="23.0" prefWidth="56.0" text="执行" />
+                  <MenuButton fx:id="uiHttpMethod" layoutX="3.0" layoutY="14.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-min-width: 70px; -fx-max-width: 70px;" text="GET">
                     <items>
 <!--                      <MenuItem mnemonicParsing="false" fx:value="GET" />-->
 <!--                      <MenuItem mnemonicParsing="false" fx:value="POST" />-->
@@ -20,7 +25,14 @@
 <!--                      <MenuItem mnemonicParsing="false" fx:value="OPTIONS" />-->
                     </items>
                   </MenuButton>
-                  <TextField layoutX="133.0" layoutY="14.0" prefHeight="23.0" prefWidth="387.0" />
+             
+                  <TextField fx:id="textEdit" layoutX="140.0" layoutY="14.0" prefHeight="23.0" prefWidth="380.0" promptText="http://" />
+                  <MenuButton layoutX="77.0" layoutY="14.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="56.0" style="-fx-max-width: 70px;" text="http">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="http" />
+                      <MenuItem mnemonicParsing="false" text="https" />
+                    </items>
+                  </MenuButton>
              </AnchorPane>
          </content>
        </Tab>

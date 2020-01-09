@@ -1,4 +1,4 @@
-package io.sufeng.ui;
+package io.sufeng;
 
 import io.sufeng.control.MainController;
 import javafx.application.Application;
