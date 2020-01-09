@@ -11,8 +11,9 @@
         <module>nio</module>
         <module>dubbo-demo</module>
         <module>dubbo-spring-demo</module>
-        <module>dubbo-springboot-demo</module>
         <module>singleton</module>
+        <module>javase</module>
+        <module>mock-concrrent-http-req</module>
     </modules>
     <packaging>pom</packaging>
 
