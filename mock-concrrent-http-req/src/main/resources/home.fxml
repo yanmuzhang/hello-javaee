@@ -3,44 +3,50 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.sufeng.view.home.HomeControl">
-    <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-            <Tab text="Http">
-                <content>
-                    <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0"
-                                minWidth="0.0" prefHeight="374.0" prefWidth="600.0">
-                        <Button layoutX="532.0" layoutY="14.0" onAction="#handlerBtnClick"
-                                onMouseClicked="#onExecCliced" prefHeight="23.0" prefWidth="56.0" text="执行"/>
-                        <MenuButton fx:id="uiHttpMethod" layoutX="3.0" layoutY="14.0" mnemonicParsing="false"
-                                    nodeOrientation="LEFT_TO_RIGHT" style="-fx-min-width: 70px; -fx-max-width: 70px;"
-                                    text="GET">
-                            <items>
-                            </items>
-                        </MenuButton>
+<Pane prefHeight="592.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.sufeng.view.home.HomeControl">
 
-                        <TextField fx:id="textEdit" layoutX="140.0" layoutY="14.0" prefHeight="23.0" prefWidth="380.0"
-                                   promptText="http://"/>
-                        <MenuButton layoutX="77.0" layoutY="14.0" mnemonicParsing="false" prefHeight="23.0"
-                                    prefWidth="56.0" style="-fx-max-width: 70px;" text="http">
-                            <items>
-                                <MenuItem mnemonicParsing="false" text="http"/>
-                                <MenuItem mnemonicParsing="false" text="https"/>
-                            </items>
-                        </MenuButton>
-                    </AnchorPane>
+
+    <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="64.0" prefWidth="837.0">
+        <Button layoutX="735.0" layoutY="14.0" onAction="#handlerBtnClick" onMouseClicked="#onExecCliced" prefHeight="23.0" prefWidth="91.0" text="执行" />
+        <MenuButton fx:id="uiHttpMethod" layoutX="17.0" layoutY="14.0" maxWidth="94.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="23.0" prefWidth="94.0" style="-fx-min-width: 100px; -fx-max-width: 100px;" text="GET">
+            <items>
+            </items>
+        </MenuButton>
+        <TextField fx:id="httpPath" layoutX="120.0" layoutY="14.0" prefHeight="23.0" prefWidth="609.0" promptText="http://" />
+    </Pane>
+
+    <TabPane layoutY="66.0" prefHeight="323.0" prefWidth="837.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Authorization">
+                <content>
+
                 </content>
             </Tab>
-            <Tab text="选项卡2">
+            <Tab text="Header">
                 <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="374.0" prefWidth="600.0">
+
+
+                    </Pane>
+                </content>
+            </Tab>
+            <Tab text="Body">
+                <content>
+                    <Pane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                         <children>
-                            <Button layoutX="48.0" layoutY="55.0" mnemonicParsing="false" text="跳转界面"
-                                    onAction="#onToFormCliced"/>
+                            <RadioButton layoutX="24.0" layoutY="11.0" mnemonicParsing="false" selected="true" text="application/json" userData="application/json">
+                                <toggleGroup>
+                                    <ToggleGroup fx:id="groupType" />
+                                </toggleGroup>
+                            </RadioButton>
+                            <RadioButton layoutX="154.0" layoutY="11.0" mnemonicParsing="false" text="application/x-www-form-urlencoded" toggleGroup="$groupType" userData="application/x-www-form-urlencoded" />
                         </children>
-                    </AnchorPane>
+                    </Pane>
                 </content>
             </Tab>
         </tabs>
     </TabPane>
+    <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="64.0" prefWidth="837.0">
+        <TextArea fx:id="httpResponseLog" layoutY="345.0" prefHeight="218.0" prefWidth="837.0" />
+    </Pane>
 </Pane>

@@ -12,10 +12,6 @@ import javafx.stage.WindowEvent;
  */
 public class HomeView extends BaseView<HomeControl> {
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-
     @Override
     public String getViewName() {
         return "home.fxml";

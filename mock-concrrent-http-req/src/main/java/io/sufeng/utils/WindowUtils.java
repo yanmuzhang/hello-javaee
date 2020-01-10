@@ -1,6 +1,4 @@
-package io.sufeng.view.utils;
-
-import javafx.stage.Stage;
+package io.sufeng.utils;
 
 /**
  * @author: sufeng
