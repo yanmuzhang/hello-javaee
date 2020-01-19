@@ -13,7 +13,10 @@
         <module>dubbo-spring-demo</module>
         <module>singleton</module>
         <module>javase</module>
-        <module>mock-concrrent-http-req</module>
+        <module>deploy-tools</module>
+        <module>network-call-chain</module>
+        <module>agent-test</module>
+        <module>springboot-demo</module>
     </modules>
     <packaging>pom</packaging>
 

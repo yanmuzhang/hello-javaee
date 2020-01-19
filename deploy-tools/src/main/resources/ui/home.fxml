@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" stylesheets="@application.css"
+      xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="io.sufeng.view.home.HomeControl">
+<!--    <VBox prefHeight="29.0" prefWidth="800.0">-->
+<!--        <MenuBar>-->
+<!--            <Menu text="File">-->
+<!--                <MenuItem text="打开"/>-->
+<!--            </Menu>-->
+<!--            <Menu text="View">-->
+<!--                <MenuItem text="History"/>-->
+<!--            </Menu>-->
+<!--            <Menu text="Tools">-->
+<!--                <MenuItem text="Global Headers"/>-->
+<!--            </Menu>-->
+<!--            <Menu text="Help">-->
+<!--                <MenuItem text="GitHub"/>-->
+<!--                <MenuItem text="OpenSource"/>-->
+<!--                <MenuItem text="Register"/>-->
+<!--                <MenuItem text="About"/>-->
+<!--            </Menu>-->
+<!--        </MenuBar>-->
+<!--    </VBox>-->
+<!--    <FlowPane prefHeight="144.0" prefWidth="800.0">-->
+<!--        <MenuButton fx:id="uiHttpMethod" maxWidth="94.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT"-->
+<!--                    prefHeight="23.0" prefWidth="94.0" style="-fx-min-width: 100px; -fx-max-width: 100px;" text="GET"/>-->
+<!--        <TextField fx:id="httpPath" prefHeight="23.0" prefWidth="609.0" promptText="http://"-->
+<!--                   style="-fx-padding: 10px;"/>-->
+<!--        <Button onAction="#handlerBtnClick" onMouseClicked="#onExecCliced" prefHeight="23.0" prefWidth="91.0"-->
+<!--                text="执行"/>-->
+<!--    </FlowPane>-->
+    <TabPane fx:id="tabPane" layoutY="66.0" prefHeight="265.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+<!--        <tabs>-->
+<!--            <Tab text="Authorization">-->
+<!--                <content>-->
+<!--                    <Button layoutX="735.0" layoutY="14.0" onAction="#handlerBtnClick" onMouseClicked="#onExecCliced"-->
+<!--                            prefHeight="23.0" prefWidth="91.0" text="执行"/>-->
+<!--                </content>-->
+<!--            </Tab>-->
+<!--            <Tab text="Header">-->
+<!--                <content>-->
+<!--                    <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0"-->
+<!--                          minWidth="0.0" prefHeight="374.0" prefWidth="600.0">-->
+<!--                    </Pane>-->
+<!--                </content>-->
+<!--            </Tab>-->
+<!--            <Tab text="Body">-->
+<!--                <content>-->
+<!--                    <Pane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">-->
+<!--                        <children>-->
+<!--                            <RadioButton layoutX="24.0" layoutY="11.0" mnemonicParsing="false" selected="true"-->
+<!--                                         text="application/json" userData="application/json">-->
+<!--                                <toggleGroup>-->
+<!--                                    <ToggleGroup fx:id="groupType"/>-->
+<!--                                </toggleGroup>-->
+<!--                            </RadioButton>-->
+<!--                            <RadioButton layoutX="154.0" layoutY="11.0" mnemonicParsing="false"-->
+<!--                                         text="application/x-www-form-urlencoded" toggleGroup="$groupType"-->
+<!--                                         userData="application/x-www-form-urlencoded"/>-->
+<!--                        </children>-->
+<!--                    </Pane>-->
+<!--                </content>-->
+<!--            </Tab>-->
+<!--        </tabs>-->
+    </TabPane>
+<!--    <TextArea fx:id="httpResponseLog" layoutY="345.0" prefHeight="228.0" prefWidth="800.0"/>-->
+</VBox>
