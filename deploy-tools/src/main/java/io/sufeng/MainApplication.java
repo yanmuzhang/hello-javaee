@@ -1,7 +1,7 @@
 package io.sufeng;
 
 import com.sun.javafx.application.LauncherImpl;
-import io.sufeng.view.home.HomeView;
+import io.sufeng.core.home.HomeView;
 
 /**
  * @author: sufeng
