@@ -21,7 +21,6 @@ public class HomeView extends BaseView<HomeControl> {
     @Override
     public void onViewStart() {
         System.out.println("onViewStart");
-
     }
 
 

@@ -1,13 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<VBox fx:id="httpBox" prefHeight="600.0" prefWidth="800.0"
-      xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="io.sufeng.module.encryption.EncryptionModuleControl">
+<VBox fx:id="httpBox" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.sufeng.module.encryption.EncryptionModuleControl">
     <children>
-        <Label text="加解密模块"/>
+        <TabPane prefHeight="450.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="MD5">
+                    <content>
+                        <Pane prefHeight="-Infinity" prefWidth="-Infinity">
+                            <children>
+                                <TextArea layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="340.0"
+                                          promptText="原始文本"/>
+                                <TextArea layoutX="450.0" layoutY="10.0" prefHeight="400.0" prefWidth="340.0"
+                                          promptText="密文"/>
+                                <Button layoutX="360.0" layoutY="200.0" mnemonicParsing="false" prefWidth="80"
+                                        text="加密">
+                                    <font>
+                                        <Font size="10.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="360.0" layoutY="260.0" mnemonicParsing="false" prefWidth="80"
+                                        text="解密">
+                                    <font>
+                                        <Font size="10.0"/>
+                                    </font>
+                                </Button>
+                                <Label layoutX="320.0" layoutY="387.0" text="清空"/>
+                                <Label layoutX="755.0" layoutY="387.0" text="清空"/>
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
+                <Tab text="AES">
+                    <content>
+                        <Pane prefHeight="-Infinity" prefWidth="-Infinity">
+                            <children>
+                                <TextArea layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="340.0"
+                                          promptText="原始文本"/>
+                                <TextArea layoutX="450.0" layoutY="10.0" prefHeight="400.0" prefWidth="340.0"
+                                          promptText="密文"/>
+                                <Button layoutX="360.0" layoutY="200.0" mnemonicParsing="false" prefWidth="80"
+                                        text="加密">
+                                    <font>
+                                        <Font size="10.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="360.0" layoutY="260.0" mnemonicParsing="false" prefWidth="80"
+                                        text="解密">
+                                    <font>
+                                        <Font size="10.0"/>
+                                    </font>
+                                </Button>
+                                <Label layoutX="320.0" layoutY="387.0" text="清空"/>
+                                <Label layoutX="755.0" layoutY="387.0" text="清空"/>
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
+                <Tab text="DES">
+                    <content>
+                        <Pane prefHeight="-Infinity" prefWidth="-Infinity">
+                            <children>
+                                <TextArea layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="340.0"
+                                          promptText="原始文本"/>
+                                <TextArea layoutX="450.0" layoutY="10.0" prefHeight="400.0" prefWidth="340.0"
+                                          promptText="密文"/>
+                                <Button layoutX="360.0" layoutY="200.0" mnemonicParsing="false" prefWidth="80"
+                                        text="加密">
+                                    <font>
+                                        <Font size="10.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="360.0" layoutY="260.0" mnemonicParsing="false" prefWidth="80"
+                                        text="解密">
+                                    <font>
+                                        <Font size="10.0"/>
+                                    </font>
+                                </Button>
+                                <Label layoutX="320.0" layoutY="387.0" text="清空"/>
+                                <Label layoutX="755.0" layoutY="387.0" text="清空"/>
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
+                <Tab text="RSA">
+                    <content>
+                        <Pane prefHeight="-Infinity" prefWidth="-Infinity">
+                            <children>
+                                <TextArea layoutX="10.0" layoutY="10.0" prefHeight="120.0" prefWidth="340.0"
+                                          promptText="公钥"/>
+                                <Label alignment="TOP_LEFT" contentDisplay="TOP" ellipsisString="" layoutX="360.0"
+                                       layoutY="16.0" lineSpacing="5" maxHeight="111.0" maxWidth="80.0"
+                                       prefHeight="111.0" prefWidth="80.0" style="-fx-padding: 3;" text="我没有密钥,点击我生成密钥对"
+                                       textFill="RED" textOverrun="CLIP" underline="true" wrapText="true"/>
+                                <TextArea layoutX="450.0" layoutY="10.0" prefHeight="120.0" prefWidth="340.0"
+                                          promptText="私钥"/>
+                                <TextArea layoutX="10.0" layoutY="150.0" prefHeight="260.0" prefWidth="340.0"
+                                          promptText="原始文本"/>
+                                <Button layoutX="360.0" layoutY="200.0" mnemonicParsing="false" prefWidth="80.0"
+                                        text="加密">
+                                    <font>
+                                        <Font size="10.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="360.0" layoutY="260.0" mnemonicParsing="false" prefWidth="80.0"
+                                        text="解密">
+                                    <font>
+                                        <Font size="10.0"/>
+                                    </font>
+                                </Button>
+                                <TextArea layoutX="450.0" layoutY="150.0" prefHeight="260.0" prefWidth="340.0"
+                                          promptText="密文"/>
+                                <Label layoutX="320.0" layoutY="387.0" text="清空"/>
+                                <Label layoutX="755.0" layoutY="387.0" text="清空"/>
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
+                <Tab text="SM2">
+                    <content>
+                        <Pane prefHeight="-Infinity" prefWidth="-Infinity">
+                            <children>
+                                <TextArea layoutX="10.0" layoutY="10.0" prefHeight="120.0" prefWidth="340.0"
+                                          promptText="公钥"/>
+                                <Label alignment="TOP_LEFT" contentDisplay="TOP" ellipsisString="" layoutX="360.0"
+                                       layoutY="16.0" lineSpacing="5" maxHeight="111.0" maxWidth="80.0"
+                                       prefHeight="111.0" prefWidth="80.0" style="-fx-padding: 3;" text="我没有密钥,点击我生成密钥对"
+                                       textFill="RED" textOverrun="CLIP" underline="true" wrapText="true"/>
+                                <TextArea layoutX="450.0" layoutY="10.0" prefHeight="120.0" prefWidth="340.0"
+                                          promptText="私钥"/>
+                                <TextArea layoutX="10.0" layoutY="150.0" prefHeight="260.0" prefWidth="340.0"
+                                          promptText="原始文本"/>
+                                <Button layoutX="360.0" layoutY="200.0" mnemonicParsing="false" prefWidth="80.0"
+                                        text="加密">
+                                    <font>
+                                        <Font size="10.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="360.0" layoutY="260.0" mnemonicParsing="false" prefWidth="80.0"
+                                        text="解密">
+                                    <font>
+                                        <Font size="10.0"/>
+                                    </font>
+                                </Button>
+                                <TextArea layoutX="450.0" layoutY="150.0" prefHeight="260.0" prefWidth="340.0"
+                                          promptText="密文"/>
+                                <Label layoutX="320.0" layoutY="387.0" text="清空"/>
+                                <Label layoutX="755.0" layoutY="387.0" text="清空"/>
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
+                <Tab text="SM4">
+                    <content>
+                        <Pane prefHeight="-Infinity" prefWidth="-Infinity">
+                            <children>
+                                <TextArea layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="340.0"
+                                          promptText="原始文本"/>
+                                <TextArea layoutX="450.0" layoutY="10.0" prefHeight="400.0" prefWidth="340.0"
+                                          promptText="密文"/>
+                                <Button layoutX="360.0" layoutY="200.0" mnemonicParsing="false" prefWidth="80"
+                                        text="加密">
+                                    <font>
+                                        <Font size="10.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="360.0" layoutY="260.0" mnemonicParsing="false" prefWidth="80"
+                                        text="解密">
+                                    <font>
+                                        <Font size="10.0"/>
+                                    </font>
+                                </Button>
+                                <Label layoutX="320.0" layoutY="387.0" text="清空"/>
+                                <Label layoutX="755.0" layoutY="387.0" text="清空"/>
+                            </children>
+                        </Pane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
     </children>
 </VBox>

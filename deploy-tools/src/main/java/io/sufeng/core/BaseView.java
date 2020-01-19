@@ -15,6 +15,7 @@ import java.net.URL;
  * @create: 2020-01-10 09:25
  */
 public abstract class BaseView<Control> extends Application {
+
     protected Parent rootView;
 
     protected Control control;
@@ -35,7 +36,6 @@ public abstract class BaseView<Control> extends Application {
         new JMetro(JMetro.Style.LIGHT).applyTheme(scene);
         primaryStage.setOnCloseRequest(event -> onViewClose(event));
         primaryStage.setScene(scene);
-
         primaryStage.show();
         this.onViewStart();
     }
@@ -55,7 +55,7 @@ public abstract class BaseView<Control> extends Application {
     public abstract String getViewName();
 
     public String getViewStyle() {
-        return "ui/application.css";
+        return null;
     }
 
     public abstract void onViewStart();

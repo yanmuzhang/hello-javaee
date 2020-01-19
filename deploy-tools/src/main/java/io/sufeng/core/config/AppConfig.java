@@ -34,6 +34,14 @@ public class AppConfig {
         this.version = version;
     }
 
+    public void setCode(Object code) {
+        this.code = code;
+    }
+
+    public void setEncryption(Object encryption) {
+        this.encryption = encryption;
+    }
+
     public Object getHttp() {
         return http;
     }
