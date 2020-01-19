@@ -3,9 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox prefHeight="600.0" prefWidth="800.0" stylesheets="@application.css"
-      xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="io.sufeng.core.home.HomeControl">
+<VBox prefHeight="800.0" prefWidth="1200.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.sufeng.core.home.HomeControl">
 <!--    <VBox prefHeight="29.0" prefWidth="800.0">-->
 <!--        <MenuBar>-->
 <!--            <Menu text="File">-->
@@ -33,7 +31,7 @@
 <!--        <Button onAction="#handlerBtnClick" onMouseClicked="#onExecCliced" prefHeight="23.0" prefWidth="91.0"-->
 <!--                text="执行"/>-->
 <!--    </FlowPane>-->
-    <TabPane fx:id="tabPane" layoutY="66.0" prefHeight="265.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+    <TabPane fx:id="tabPane" layoutY="66.0" prefHeight="800.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
 <!--        <tabs>-->
 <!--            <Tab text="Authorization">-->
 <!--                <content>-->

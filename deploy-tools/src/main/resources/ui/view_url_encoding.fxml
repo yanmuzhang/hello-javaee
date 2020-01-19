@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<VBox fx:id="httpBox" prefHeight="600.0" prefWidth="800.0"
-      xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="io.sufeng.module.code.CodeModuleControl">
-    <children>
-        <Label text="url_encoding.fxml"/>
-    </children>
-</VBox>
+<GridPane fx:id="httpBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.sufeng.module.code.CodeModuleControl">
+   <columnConstraints>
+      <ColumnConstraints fillWidth="true" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints  />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TextArea fx:id="leftText" prefHeight="200.0" prefWidth="320.0" />
+      <TextArea fx:id="rightText" prefHeight="200.0" prefWidth="320.0" GridPane.columnIndex="2" />
+      <Label fx:id="lable" alignment="CENTER" prefHeight="15.0" prefWidth="100.0" text="-&gt;" GridPane.columnIndex="1" />
+      <Label prefHeight="50" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button fx:id="ok" mnemonicParsing="false" prefWidth="100" text="转换" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   </children>
+</GridPane>
