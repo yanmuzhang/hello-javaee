@@ -17,6 +17,7 @@
         <module>network-call-chain</module>
         <module>agent-test</module>
         <module>springboot-demo</module>
+        <module>spring-shell</module>
     </modules>
     <packaging>pom</packaging>
 
