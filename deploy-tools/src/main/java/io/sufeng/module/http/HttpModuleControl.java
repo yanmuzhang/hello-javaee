@@ -5,11 +5,8 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
 
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.ResourceBundle;
 
 /**
@@ -19,8 +16,6 @@ import java.util.ResourceBundle;
 public class HttpModuleControl implements Initializable {
 
     static String[] httpMethod = new String[]{"GET", "POST", "PUT", "DELETE"};
-
-
 
 
     @FXML

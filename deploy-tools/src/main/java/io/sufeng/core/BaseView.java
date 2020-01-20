@@ -33,7 +33,7 @@ public abstract class BaseView<Control> extends Application {
         if(viewStyle != null && viewStyle.length()!=0){
             scene.getStylesheets().add(BaseView.class.getClassLoader().getResource(viewStyle).toExternalForm());
         }
-        new JMetro(JMetro.Style.LIGHT).applyTheme(scene);
+//        new JMetro(JMetro.Style.DARK).applyTheme(scene);
         primaryStage.setOnCloseRequest(event -> onViewClose(event));
         primaryStage.setScene(scene);
         primaryStage.show();
