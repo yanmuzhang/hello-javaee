@@ -15,7 +15,8 @@ public enum Module {
 
     HTTP("Http请求", "ui/view_http.fxml"),
     ENCRYPTION("加解密","ui/view_encryption.fxml"),
-    URL_CODING("URL编码/解码", "ui/view_url_encoding.fxml") ;
+    URL_CODING("URL编码/解码", "ui/view_url_encoding.fxml") ,
+    WEB_TOOLS("WEB_TOOLS", "ui/view_web.fxml") ;
 
     String name;
     String fxml;
