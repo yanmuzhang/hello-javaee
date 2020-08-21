@@ -36,11 +36,12 @@ public class SimpleClassTransformer implements ClassFileTransformer {
                 CtConstructor[] cs = clazz.getConstructors();
                 for (CtConstructor constructor : cs) {
                     constructor.insertAfter("System.out.println(this.getURL());\n  ");
+                    constructor.insertAfter("this.setRequestProperty(\"chainId3\", \"" + chainId + "\");\n  ");
                 }
                 CtMethod declaredMethod = clazz.getDeclaredMethod("getHeaderFields");
                 String setHeader = "this.setRequestProperty(\"chainId3\", \"" + chainId + "\");\n  ";
                 System.out.println(setHeader);
-                declaredMethod.insertAfter(setHeader);
+                declaredMethod.insertBefore(setHeader);
                 byte[] byteCode = clazz.toBytecode();
                 clazz.detach();
 

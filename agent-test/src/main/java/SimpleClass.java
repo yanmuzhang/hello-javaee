@@ -15,7 +15,7 @@ public class SimpleClass {
     public static void main( String[] args ) throws IOException {
         System.out.println("===========执行main方法=============");
         System.setProperty("hostName","baidu");
-        fetch("http://localhost:8080/boot/get/hello");
+        fetch("http://8080.2.sufeng.io/boot/get/hello");
 //
 //        System.out.println("===========分割线=============");
 //        System.setProperty("chainId","163");
@@ -26,6 +26,9 @@ public class SimpleClass {
 
         final URL url = new URL(address);
         final URLConnection connection = url.openConnection();
+        connection.setDoInput(true);
+        connection.setDoOutput(true);
+        connection.connect();
 
         Map<String, List<String>> headerFields = connection.getHeaderFields();
         headerFields.forEach((k,v)->System.out.println(k+"  ==>  "+String.join(",",v)));
@@ -40,6 +43,7 @@ public class SimpleClass {
             }
 
             System.out.println("Content size:" + sb.length());
+            System.out.println("Content :" + sb.toString());
         }
 
     }

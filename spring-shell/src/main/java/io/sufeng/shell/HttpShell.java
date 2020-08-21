@@ -4,6 +4,8 @@ import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
 
+import javax.lang.model.type.NullType;
+
 /**
  * @author: sufeng
  * @create: 2020-01-20 17:07
@@ -21,11 +23,11 @@ public class HttpShell {
 //    };
 
 
-    @ShellMethod("执行Http请求  http -xGET -H[content-type=application/json;charset=utf-8,token=123] -D[{\"name\":\"123\"}] http://localhost:8080/api/v1/query")
-    public String http(@ShellOption(value = "-X" ,defaultValue = "GET") String method,
+    @ShellMethod("执行Http请求  jurl -xGET -H[content-type=application/json;charset=utf-8,token=123] -D[{\"name\":\"123\"}] http://localhost:8080/api/v1/query")
+    public String jurl(@ShellOption(value = "-X" ,defaultValue = "GET") String method,
                        @ShellOption(value = "-H",defaultValue = "application/x-www-form-urlencoded;charset=utf-8") String headers,
                        @ShellOption(value = "-D" ,defaultValue = "") String data,
-                       @ShellOption("-P") String url) {
+                       @ShellOption String url) {
         System.out.println(method);
         System.out.println(headers);
         System.out.println(data);
